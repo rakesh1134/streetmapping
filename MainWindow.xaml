@@ -1,0 +1,30 @@
+﻿<Window x:Class="streetmapping.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:streetmapping"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.ColumnSpan="2" Click="button_Click">Load Map</Button>
+
+        <Label Grid.Row="1" Grid.Column="0">Start</Label>
+        <TextBox x:Name="txtstart" Grid.Row="1" Grid.Column="1"></TextBox>
+        <Label Grid.Row="2" Grid.Column="0">End</Label>
+        <TextBox x:Name="txtend" Grid.Row="2" Grid.Column="1"></TextBox>
+        <Button x:Name="distbutton" Grid.Row="3" Grid.ColumnSpan="2" Click="distbutton_Click">Calculate shortest distance</Button>
+        <TextBox x:Name="txtanswer" Grid.Row="4" Grid.ColumnSpan="2" IsReadOnly="True" ></TextBox>
+    </Grid>
+</Window>
